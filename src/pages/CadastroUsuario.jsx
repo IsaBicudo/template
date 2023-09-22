@@ -12,7 +12,6 @@ function CadastroUsuario() {
   const [ erro, setErro ] = useState( false );
 
   function Cadastrar( evento ) {
-
     evento.preventDefault();
     fetch( process.env.REACT_APP_BACKEND + "usuarios", {
         method: "POST",
@@ -42,9 +41,7 @@ function CadastroUsuario() {
     .catch( ( erro ) => { setErro( "Ops...ocorreu um erro" ) } )
     
   }
-
   useEffect( () => {
-
     setNome( "" );
     setEmail( "" );
     setCpf( "" );
@@ -123,5 +120,4 @@ function CadastroUsuario() {
     </Container>
   )
 }
-
 export default CadastroUsuario;

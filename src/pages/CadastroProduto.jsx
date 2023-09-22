@@ -49,10 +49,8 @@ function CadastroProduto() {
                 }
             })
             .catch((erro) => { setErro("Ops...ocorreu um erro") })
-
         }
     }
-
     useEffect( () => {
         setTitulo( "" );
         setDescricao( "" );
@@ -61,9 +59,7 @@ function CadastroProduto() {
         setDuracao( "" );
         setImagem("" );
     }, [cadastro] );
-
     useEffect( () => {
-
         if( id ) {
             const usuario = localStorage.getItem( "usuario" );
             fetch(process.env.REACT_APP_BACKEND + "produtos/" + usuario + "/" + id, {
@@ -88,11 +84,8 @@ function CadastroProduto() {
             })
             .catch((erro) => { setErro("Ops...ocorreu um erro") })
         }
-
     }, [] );
-
     return (
-
         <Container component="section" maxWidth="sm">
             <Box sx={{
                 mt: 10,
@@ -171,8 +164,6 @@ function CadastroProduto() {
                 </Box>
             </Box>
         </Container>
-
     )
 }
-
 export default CadastroProduto;
